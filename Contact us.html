@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Contact Us</title>
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,6000,700,800&display=swap');
+
+	* {
+		font-family: 'Poppins', sans-serif;
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		/* background: #03080a; */
+		/* background: #03a9f4; */
+		background: url('headphone.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.container {
+		width: 80%;
+		padding: 20px;
+	}
+
+	.container h2 {
+		width: 100%;
+		/* color: #45f3ff; */
+		color: #fff;
+		font-size: 36px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	.container .row100 {
+		position: relative;
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	}
+
+	.container .row100 .col {
+		position: relative;
+		width: 100%;
+		padding: 0 10px;
+		margin: 30px 0 10px;
+		transition: 0.5s;
+	}
+
+	.container .row100 .col .inputbox {
+		position: relative;
+		width: 100%;
+		height: 40px;
+		/* color: #45f3ff; */
+		color: #fff;
+	}
+
+	.container .row100 .col .inputbox input,
+	.container .row100 .inputbox.textarea textarea {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		box-shadow: none;
+		outline: none;
+		background: transparent;
+		border: none;
+		font-size: 15px;
+		padding: 0 10px;
+		z-index: 1;
+		/* color: #fff; */
+		color: #fff;
+	}
+
+	.container .row100 .col .inputbox .text {
+		position: absolute;
+		top: 0;
+		left: 0;
+		line-height: 40px;
+		font-size: 18px;
+		padding: 0 10px;
+		transition: 0.5s;
+		pointer-events: none;
+		display: block;
+	}
+
+	.container .row100 .inputbox input:focus+.text,
+	.container .row100 .inputbox input:valid+.text {
+		top: -35px;
+		left: -10;
+	}
+
+	.container .row100 .col .inputbox .line {
+		position: absolute;
+		bottom: 0;
+		display: block;
+		width: 100%;
+		height: 2px;
+		/* background: linear-gradient(315deg, #1eff1e, #0db3be); */
+		/* background: linear-gradient(315deg, #0db3be, #ff0058); */
+		/* background: linear-gradient(315deg, #ffbc00, #ff0058); */
+		background: #fff;
+		color: #fff;
+		pointer-events: none;
+		transition: 0.5s;
+		border-radius: 2px;
+	}
+
+	.container .row100 .inputbox input:focus~.line,
+	.container .row100 .inputbox input:valid~.line {
+		height: 100%;
+		opacity: .2;
+	}
+
+	.container .row100 .inputbox.textarea {
+		position: relative;
+		width: 100%;
+		height: 100px;
+		padding: 10px 0;
+	}
+
+	.container .row100 .inputbox.textarea textarea {
+		height: 100%;
+		resize: none;
+		font-weight: 200;
+	}
+
+	.container .row100 .inputbox textarea:focus+.text,
+	.container .row100 .inputbox textarea:valid+.text {
+		top: -35px;
+		left: -10px;
+	}
+
+	.container .row100 .inputbox textarea:focus~.line,
+	.container .row100 .inputbox textarea:valid~.line {
+		height: 100%;
+		color: #fff;
+		opacity: .2;
+	}
+
+	input[type="submit"] {
+		border: none;
+		padding: 7px 35px;
+		cursor: pointer;
+		outline: none;
+		/* background: #45f3ff; */
+		background: #b13a81d1;
+		/* color: #fff; */
+		color: #000;
+		font-size: 22px;
+		border-radius: 7px;
+		font-weight: 500;
+		transition: .3s ease-in-out;
+	}
+
+	input[type="submit"]:hover {
+		background: linear-gradient(315deg, #ffbc00, #ff0058);
+		color: #fff;
+		transition: .3s ease-in-out;
+	}
+
+	h2 {
+		margin-top: 1%;
+	}
+
+	@media only screen and (max-width: 991px) and (min-width: 250px) {
+		.container h2 {
+			width: 101%;
+			color: #fff;
+			font-size: 36px;
+			margin-bottom: 10px;
+			text-align: center;
+			margin-left: 50%;
+		}
+
+		.container {
+			width: 80%;
+			padding: 20px;
+			margin-left: 25%;
+		}
+
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 47.5vh;
+			/* background: #03080a; */
+			/* background: #03a9f4; */
+			background: url(headphone.jpg);
+			background-size: cover;
+			zoom: 210%;
+			margin-left: -11%;
+			background-repeat: no-repeat;
+			width: 65%;
+		}
+	}
+</style>
+
+<body>
+	<div class="container">
+		<h2>Contact Us</h2>
+		<div class="row100">
+			<div class="col">
+				<div class="inputbox">
+					<input type="text" name="" required="required">
+					<span class="text">First Name</span>
+					<span class="line"></span>
+				</div>
+			</div>
+			<div class="col">
+				<div class="inputbox">
+					<input type="text" name="" required="required">
+					<span class="text">Last Name</span>
+					<span class="line"></span>
+				</div>
+			</div>
+			<div class="col">
+				<div class="inputbox">
+					<input type="text" name="" required="required">
+					<span class="text">E-mail</span>
+					<span class="line"></span>
+				</div>
+			</div>
+			<div class="col">
+				<div class="inputbox">
+					<input type="text" name="" required="required">
+					<span class="text">Mobile</span>
+					<span class="line"></span>
+				</div>
+			</div>
+			<div class="col">
+				<div class="inputbox textarea">
+					<textarea required="required"></textarea>
+					<span class="text">Type your massage here...</span>
+					<span class="line"></span>
+				</div>
+			</div>
+		</div>
+		<div class="row100">
+			<div class="col">
+				<input type="submit" value="Register here">
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

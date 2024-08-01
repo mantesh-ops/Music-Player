@@ -1,0 +1,419 @@
+<!Doctype html>
+<html>
+<title>
+   Responsive Login & Signup page
+</title>
+
+<head></head>
+<style>
+   @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+   }
+
+   body {
+      transition: .5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      background: url('music.jpg');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 3%;
+      /* background: #00F260;
+      background: -webkit-linear-gradient(to right, #0575E6, #00F260);
+      background: linear-gradient(to right, #0575E6, #00F260); */
+   }
+
+   .container {
+      position: relative;
+      height: 500px;
+      width: 700px;
+      margin: 20px;
+   }
+
+   .bluebg {
+      position: relative;
+      top: 40px;
+      width: 100%;
+      height: 420px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 5px 45px rgba(0, 0, 0, 0.15);
+   }
+
+   .bluebg .box {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+   }
+
+   .bluebg .box h2 {
+      color: #fff;
+      font-size: 1.2em;
+      font-weight: 500;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+   }
+
+   .bluebg .box button {
+      cursor: pointer;
+      padding: 10px 20px;
+      background: #fff;
+      color: #000000;
+      font-size: 16px;
+      font-weight: 500;
+      border: 1px solid black;
+      border-radius: 10px;
+   }
+
+   .formBx {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: #fff;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 5px 45px rgba(0, 0, 0, 0.25);
+      transition: 0.5s ease-in-out;
+      overflow: hidden;
+   }
+
+   .formBx.active {
+      left: 50%;
+      /* transition: 1s; */
+   }
+
+   body.active {
+      background: url('disc.jpg');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      /* background: #00b09b;
+      background: -webkit-linear-gradient(to right, #96c93d, #00b09b);
+      background: linear-gradient(to right, #96c93d, #00b09b); */
+   }
+
+   .formBx .form {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding: 50px;
+      transition: 0.5;
+   }
+
+   .formBx .signinform {
+      /* transition-delay: 0s; */
+      transition: 1s;
+   }
+
+   .formBx.active .signinform {
+      left: -100%;
+      /* transition-delay: 0s; */
+      transition: 1s;
+   }
+
+   .formBx .signupform {
+      left: 100%;
+      transition: 1s;
+      /* transition-delay: 0s; */
+   }
+
+   .formBx.active .signupform {
+      left: 0%;
+      /* transition-delay: 0s; */
+      transition: 1s;
+   }
+
+   .formBx .form form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+   }
+
+   .formBx .form form h3 {
+      font-size: 1.5em;
+      color: #fff;
+      margin-bottom: 20px;
+      font-weight: 500;
+   }
+
+   .formBx .form form input {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 10px;
+      outline: none;
+      border: 1px solid black;
+      font-size: 16px;
+      border-radius: 10px;
+   }
+
+   .formBx .form form input[type="submit"] {
+      cursor: pointer;
+      outline: none;
+      color: #fff;
+      background: #03a9f4;
+      max-width: 100px;
+   }
+
+   .formBx.active .signupform input[type="submit"] {
+      background: #f43648;
+   }
+
+   .signupform {
+      /* background: url('disc.jpg');
+      background-size: cover; */
+      height: 100%;
+   }
+
+   .signinform {
+      /* background: url('music.jpg');
+      background-size: cover; */
+      height: 100%;
+   }
+
+   .forgot {
+      color: #fff;
+   }
+
+   .formBx {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(5px);
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-left: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+   }
+
+   .bluebg {
+      border-radius: 15px;
+   }
+
+   /* @media (min-width: 257px),(max-width: 991px) { */
+   @media only screen and (max-width: 991px) and (min-width: 400px) {
+
+      body {
+         zoom: 210%;
+         margin-top: calc(100% - 109%);
+         background-size: cover;
+         background-repeat: no-repeat;
+         height: 50vh;
+      }
+
+      .container {
+         max-width: 400px;
+         height: 650px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .container .bluebg {
+         top: 0;
+         height: 100%;
+      }
+
+      .formBx {
+         height: 500px;
+         width: 100%;
+         top: 0;
+         box-shadow: none;
+      }
+
+      .bluebg .box {
+         position: absolute;
+         bottom: 0;
+         height: 150px;
+         width: 100%;
+      }
+
+      .box.signin {
+         top: 0;
+      }
+
+      .formBx.active {
+         top: 150px;
+         left: 0;
+      }
+   }
+
+   a {
+      text-decoration: none;
+      color: #000000;
+   }
+
+   .forgot:hover {
+      color: rgb(17, 19, 19);
+   }
+</style>
+
+<body>
+   <div class="container">
+      <div class="bluebg">
+         <div class="box signin" id="signin">
+            <h2 class="head1" style="opacity:0;">Already have an Account?<h2>
+                  <button id="in" class="signinBtn" style="opacity: 0;">Signin</button>
+         </div>
+         <div class="box signup" id="signup">
+            <h2 class="head2">Don't have an Account?<h2>
+                  <button id="up" class="signupBtn">Signup</button>
+         </div>
+      </div>
+      <div class="formBx">
+         <div class="form signinform">
+            <form>
+               <h3>Sign In</h3>
+               <input type="text" placeholder="Username" id="lusername-input" required>
+               <input type="password" placeholder="password" id="lpassword-input" required>
+               <input type="submit" id="login-button" value="Login">
+               <a href="#" class="forgot">Forgot Password</a>
+            </form>
+         </div>
+
+         <div class="form signupform">
+            <form>
+               <h3>Sign Up</h3>
+               <input type="text" id="rusername-input" placeholder="Username" required>
+               <input type="text" placeholder="E-mail" id="remail-input" required>
+               <input type="password" placeholder="password" id="rpassword-input" required>
+               <input type="password" placeholder="confirm password" id="confirm" required>
+               <input type="submit" id="register-button" value="register">
+            </form>
+         </div>
+      </div>
+   </div>
+   <script>
+      let signupBtn = document.querySelector('.signupBtn');
+      let signinBtn = document.querySelector('.signinBtn');
+      let formBx = document.querySelector('.formBx');
+      let body = document.querySelector('body');
+      let head1 = document.querySelector('.head1');
+      let head2 = document.querySelector('.head2');
+      let bluebg = document.querySelector('.bluebg');
+      signupBtn.onclick = function () {
+         formBx.classList.add('active')
+         body.classList.add('active')
+         signupBtn.style.opacity = '0';
+         signinBtn.style.opacity = '1';
+         signinBtn.style.transition = '1s';
+         head1.style.transition = '1s';
+         head1.style.opacity = '1';
+         head2.style.opacity = '0';
+      }
+      signinBtn.onclick = function () {
+         formBx.classList.remove('active')
+         body.classList.remove('active')
+         signinBtn.style.opacity = '0';
+         signupBtn.style.opacity = '1';
+         signupBtn.style.transition = '1s';
+         head2.style.transition = '1s';
+         head1.style.opacity = '0';
+         head2.style.opacity = '1';
+      }
+   </script>
+
+   <script>
+
+      // LOGIN
+
+      let loginButton = document.querySelector("#login-button");
+      let lusernameInput = document.querySelector("#lusername-input");
+      let lpasswordInput = document.querySelector("#lpassword-input");
+
+      loginButton.addEventListener("click", function () {
+         let lusername = lusernameInput.value;
+         let lpassword = lpasswordInput.value;
+         let login = true;
+         if (!lusername || !lpassword) {
+            alert("Please enter a Username and Password.");
+         }
+         else if (!lusername && lpassword) {
+            alert("Please enter a Username.");
+         }
+         else if (!lpassword && lusername) {
+            alert("Please enter Password.");
+         }
+         else {
+            // Generate unique access code
+            let accessCode = Math.random().toString(10).substring(2, 5);
+            alert("Login successful. Your access code is: " + accessCode);
+            // prompt for user to enter code
+            let code = prompt("Please enter the code to proceed");
+            // if code is not entered, show error
+
+            if (!code) {
+               alert("Code is required to proceed");
+               return;
+            }
+            // check if entered code is valid
+            else if (code === accessCode) {
+               // if code is valid, redirect to next page
+
+               console.log('send...');
+               window.open('index.html');
+               localStorage.setItem("accessCode", accessCode);
+               window.location.assign("Categry.html");
+               window.location.assign("playlist.html");
+               // window.location.assign("index.html");
+               // login = true;
+               localStorage.setItem("login", login);
+               window.assign("index.html");
+            } else {
+               // if code is invalid, show error
+               alert("Invalid code, please try again");
+            }
+         }
+      });
+
+      // REGISTRATION
+
+      let registerButton = document.querySelector("#register-button");
+      let rusernameInput = document.querySelector("#rusername-input");
+      let rpasswordInput = document.querySelector("#rpassword-input");
+      // let cpassword = document.querySelector("#confirm");
+
+      registerButton.addEventListener("click", function () {
+         let rusername = rusernameInput.value;
+         let rpassword = rpasswordInput.value;
+         let cpassword = document.querySelector("#confirm").value;
+
+         if (!rusername || !rpassword) {
+            alert("Please enter a Username, E-mail, Password and confirm password.");
+         }
+
+         // PASSWORD AND CONFIRM PASS__
+         else if (rpassword === cpassword) {
+            alert('Registration successful. Goto Login...');
+         }
+         else {
+            alert('Confirm password is incorrect !')
+         }
+      });
+
+      // let search = localStorage.getItem("search");
+      // search.placeholder = 'Search for a song';
+
+   </script>
+</body>
+
+</html>

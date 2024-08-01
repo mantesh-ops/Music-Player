@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body {
+    /* background-color: antiquewhite; */
+    background: url('https://images.pexels.com/photos/1135995/pexels-photo-1135995.jpeg?cs=srgb&dl=pexels-bob-clark-1135995.jpg&fm=jpg');
+    /* background: url('https://images.unsplash.com/photo-1614149162883-504ce4d13909?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bXVzaWMlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80'); */
+    object-fit: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    background-color: red;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 85%;
+    display: flex;
+    font-family: 'Varela Round', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    z-index: 10;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-radius: 10px;
+}
+
+header .Logo {
+    position: relative;
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header .navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+header .navigation li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+header .navigation li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+header .navigation li a:hover {
+    color: #ffeb3b;
+}
+
+header .search {
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+header .search input {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: transparent;
+    outline: none;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 0 10px 0 45px;
+}
+
+header .search input::placeholder {
+    color: #fff;
+}
+
+header .search .bx-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 18px;
+    color: #fff;
+    border-right: 1px solid #fff;
+    padding-right: 10px;
+}
+
+.container {
+    min-height: 72vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    background: rgba(255, 255, 255, 0.2);
+    border-left: 0.1px solid rgba(255, 255, 255, .2);
+    border-top: 0.1px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.15);
+}
+
+.bottom {
+    position: sticky;
+    bottom: 0;
+    height: 130px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-radius: 10px;
+    border-right: 1px solid white;
+}
+
+.icons {
+    margin-top: 14px;
+}
+
+.icons i {
+    cursor: pointer;
+}
+
+#myProgressBar {
+    width: 80vw;
+    cursor: pointer;
+}
+
+.songItemContainer {
+    margin-top: 74px;
+}
+
+.songItem {
+    height: 50px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+
+.songItem img {
+    width: 43px;
+    margin: 0 23px;
+    border-radius: 34px;
+}
+
+.timestamp {
+    margin: 0 23px;
+}
+
+.timestamp i {
+    cursor: pointer;
+}
+
+.songInfo {
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .me {
+        /* margin-left: 9%; */
+        width: 80%;
+        margin-top: 0%;
+    }
+
+    /* 
+    header .search {
+        width: 100%;
+    } */
+
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+    }
+
+    header .search input {
+        position: absolute;
+        top: 0;
+        left: 7px;
+        width: 75%;
+        height: 100%;
+        color: #fff;
+        background: transparent;
+        outline: none;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        padding: 0 10px 0 45px;
+    }
+
+    header .Logo {
+        position: relative;
+        font-size: 1.5em;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        /* text-align: center; */
+        margin-left: 6%;
+    }
+
+    header .navigation {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 10px 0px;
+        margin-left: -7%;
+        width: 380px;
+    }
+
+    .bx-search:before {
+        content: "\eb54";
+        position: relative;
+        left: 30%;
+    }
+
+    .container {
+        min-height: 72vh;
+        background-color: black;
+        color: white;
+        font-family: 'Varela Round', sans-serif;
+        display: flex;
+        margin: 23px 2.22%;
+        width: 67%;
+        border-radius: 12px;
+        padding: 34px;
+        background: rgba(255, 255, 255, 0.2);
+        border-left: 0.1px solid rgba(255, 255, 255, .2);
+        border-top: 0.1px solid rgba(255, 255, 255, .2);
+        box-shadow: 0 5px 45px rgb(0 0 0 / 15%);
+    }
+
+    .bottom {
+        position: sticky;
+        /* bottom: 0; */
+        height: 140px;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 91%;
+    }
+
+    .icons {
+        margin-top: 14px;
+        height: 49px;
+        margin-bottom: -14%;
+    }
+}
+
+#icons {
+    position: absolute;
+    margin-left: 2%;
+    /*color: white;*/
+}
+
+.songList {
+    margin-left: 21%;
+}

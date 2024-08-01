@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , intial-scal="1.0">
+    <title>DOMINIC</title>
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="https://www.unpkg.com/shery-js@1.0.0-alpha.0.5/dist/Shery.css"> -->
+    <!--Mantesh Style Sheet-->
+    <link rel="stylesheet" href="style mantesh Side nav bar.css">
+    <!-- <link rel="stylesheet" href="modal.css"> -->
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!--FAVICON__IMAGE-->
+    <!-- <link rel="icon" type="image/jpg" href="download (2).jpg"> -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- <link rel="stylesheet" href="owesCss.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- Boxicons CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--Landing page code here-->
+
+    <!-- Mantesh Side Navigation bar Code-->
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bx-D'></i>
+            <div class="logo_name">DOMINIC</div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <i class='bx bx-search'></i>
+                <input type="text" placeholder="Search...">
+                <span class="tooltip">Search</span>
+            </li>
+            <li>
+                <a href="index.html">
+                    <i class='bx bx-home bx-sm'></i>
+                    <span class="links_name">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li>
+                <a href="resposive_login_form.html">
+                    <i class='bx bx-user bx-sm'></i>
+                    <span class="links_name">SignUp</span>
+                </a>
+                <span class="tooltip">SignUp</span>
+            </li>
+            <li>
+                <a href="Contact us.html">
+                    <i class='bx bxs-contact bx-sm'></i>
+                    <span class="links_name">Contact Us</span>
+                </a>
+                <span class="tooltip">Contact Us</span>
+            </li>
+            <li>
+                <a href="playlist.html">
+                    <i class='bx bx-play bx-sm'></i>
+                    <span class="links_name">Playlist</span>
+                </a>
+                <span class="tooltip">You have to <b>Login</b> first</span>
+            </li>
+            <div id="categry">
+                <li>
+                    <a href="Categry.html">
+                        <i class='bx bx-music bx-sm'></i>
+                        <span class="links_name">Categry</span>
+                    </a>
+                    <span class="tooltip">You have to <b>Login</b> first</span>
+                </li>
+            </div>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <!--Landing page code here (Experimental)-->
+        <header class="me">
+            <a href="#" class="Logo" id="hover" data-text="&nbsp;" style="--clr:white">
+                <div class="y"><span id="ss">&nbsp;DOMINIC&nbsp;</span></div>
+            </a>
+            <ul class="navigation">
+                <li> <a href="#">Home</a> </li>
+                <li> <a href="responsive_login_form.html">SignUp</a> </li>
+                <li> <a href="Contact us.html">ContactUs</a> </li>
+                <li> <a href="glassmorphism.html">About</a></li>
+                <li> <a href="Playlist.html">Playlist</a></li>
+                <li> <a href="Categry.html">Categry</a></li>
+            </ul>
+            <div class="search">
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="You have to Login first"
+                        style="justify-content: center;">
+                </form>
+
+                <main>
+                    <div id="error-message"></div>
+                    <ul id="song-list"></ul>
+                </main>
+                <audio id="audio-player" controls></audio>
+                <i class='bx bx-search'></i>
+                <!-- <div id="results-container">
+          <ul id="song-list"></ul>
+        </div> -->
+            </div>
+        </header>
+
+        <div class="banner">
+            <div class="content">
+                <h2>Music Player</h2>
+                <p>Music is generally defined as the art of arranging sound to create some combination of form, harmony,
+                    melody,
+                    rhythm or otherwise expressive content. Exact definitions of music vary considerably around the
+                    world, though
+                    it is an aspect of all human societies, a cultural universal.</p>
+                <a href="glassmorphism.html">Read More</a>
+                <a href="blogs.html" id="blogs">Blogs</a>
+            </div>
+            <img src="music.jpg" class="image" id="stimg">
+        </div>
+
+        <!--Chart code here-->
+
+        <!-- <div class="container px-4 py-5" id="custom-cards">
+            <h2 class="pb-2 border-bottom" style="color: white;">For You,</h2>
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                <div class="col" data-aos="flip-left">
+                    <div id="card" class="card card-cover overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                        style="background-image: url('https://source.unsplash.com/500x500/?music,rock'); background-size: cover;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h2 class="pt-2 mt-3 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h2>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="me-auto">
+                                    <img src="https://source.unsplash.com/500x500/?music,rock" alt="DOMINIC" width="32"
+                                        height="32" class="rounded-circle border border-white">
+                                </li>
+                                <li class="d-flex align-items-center me-3">
+
+                                    <small>Music</small>
+                                </li>
+                                <li class="d-flex align-items-center">
+
+                                    <small></small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-aos="flip-left">
+                    <div id="card" class="card card-cover overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                        style="background-image: url('https://source.unsplash.com/500x500/?music,Headphones,smartphones'); background-size: cover;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                            <h2 class="pt-2 mt-3 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps</h2>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="me-auto">
+                                    <img src="https://source.unsplash.com/500x500/?music,Headphones,smartphones"
+                                        alt="DOMINIC" width="32" height="32" class="rounded-circle border border-white">
+                                </li>
+                                <li class="d-flex align-items-center me-3">
+
+                                    <small></small>
+                                </li>
+                                <li class="d-flex align-items-center">
+
+                                    <small>Headphones</small>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col" data-aos="flip-left">
+                    <div id="card" class="card card-cover overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                        style="background-image: url('https://source.unsplash.com/500x500/?music,singers'); background-size: cover;">
+                        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                            <h2 class="pt-2 mt-3 mb-4 display-6 lh-1 fw-bold">Another longer title</h2>
+                            <ul class="d-flex list-unstyled mt-auto">
+                                <li class="me-auto">
+                                    <img src="https://source.unsplash.com/500x500/?music,singers" alt="DOMINIC"
+                                        width="32" height="32" class="rounded-circle border border-white">
+                                </li>
+                                <li class="d-flex align-items-center me-3">
+
+                                    <small>Artists</small>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            -->
+
+        <!-- ROW_2 -->
+
+        <div class="col" data-aos="flip-left">
+            <div id="card" class="card card-cover overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                style="background-image: url('https://source.unsplash.com/500x500/?mike,spearker'); background-size: cover;">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h2 class="pt-2 mt-3 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h2>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <img src="https://source.unsplash.com/500x500/?mike,spearker" alt="DOMINIC" width="32"
+                                height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+
+                            <small>Music</small>
+                        </li>
+                        <li class="d-flex align-items-center">
+
+                            <small></small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" data-aos="flip-left">
+            <div id="card" class="card card-cover overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                style="background-image: url('https://source.unsplash.com/500x500/?cd,dvd'); background-size: cover;">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h2 class="pt-2 mt-3 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps</h2>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <img src="https://source.unsplash.com/500x500/?cd,dvd" alt="DOMINIC" width="32" height="32"
+                                class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+
+                            <small></small>
+                        </li>
+                        <li class="d-flex align-items-center">
+
+                            <small>Headphones</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" data-aos="flip-left">
+            <div id="card" class="card card-cover overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                style="background-image: url('https://source.unsplash.com/500x500/?headphones'); background-size: cover;">
+                <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                    <h2 class="pt-2 mt-3 mb-4 display-6 lh-1 fw-bold">Another longer title</h2>
+                    <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <img src="https://source.unsplash.com/500x500/?headphones" alt="DOMINIC" width="32"
+                                height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+
+                            <small>Artists</small>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <!-- PRODUCTS -->
+
+        <div class="products-container">
+            <h2>Products</h2>
+            <div class="product">
+                <div class="product-details">
+                    <h3></h3>
+                </div>
+                <div class="product-img"></div>
+            </div>
+            <div class="product">
+                <div class="product-details">
+                    <h3></h3>
+                </div>
+                <div class="product-img"></div>
+            </div>
+            <div class="product">
+                <div class="product-details">
+                    <h3></h3>
+                </div>
+                <div class="product-img"></div>
+            </div>
+            <div class="product">
+                <div class="product-details">
+                    <h3></h3>
+                </div>
+                <div class="product-img"></div>
+            </div>
+            <div class="product">
+                <div class="product-details">
+                    <h3></h3>
+                </div>
+                <div class="product-img"></div>
+            </div>
+            <div class="product">
+                <div class="product-details">
+                    <h3></h3>
+                </div>
+                <div class="product-img"></div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="content">
+                <div class="content-items">
+                    <div class="yt">
+                        <a href="https://www.youtube.com/@dominic3825"><i class="bi bi-youtube"></i></a>
+                        <b>Follow me on Youtube</b>
+                    </div>
+                    <div class="Email">
+                        <a href=""><i class="bi bi-envelope"></i></a>
+                        <b>E-mail me</b>
+                    </div>
+                    <div class="contact">
+                        <a href=""><i class="bi bi-person-lines-fill"></i></a>
+                        <b>Contact me</b>
+                    </div>
+                    <div class="insta">
+                        <a href=""><i class="bi bi-instagram"></i></a>
+                        <b>Follow me on Instagram</b>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <a class="image" style="background-image: url('download\ \(2\).jpg')"></a>
+                    <p>© DOMINIC 2023, Inc</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 400
+        }
+        );
+    </script>
+    <script src="script.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+<script>
+    // Define an array of image sources
+    var imageSources = ["https://images.pexels.com/photos/1135995/pexels-photo-1135995.jpeg?cs=srgb&dl=pexels-bob-clark-1135995.jpg&fm=jpg",
+        "headphone.jpg",
+        "music.jpg",
+        "https://us.123rf.com/450wm/katisa/katisa2108/katisa210800032/172716460-3d-render-abstract-neon-background-with-colorful-wavy-line-glowing-with-colorful-gradient-in.jpg?ver=6",
+        "disc.jpg"];
+
+    var index = 0;
+    var image = document.getElementById("stimg");
+
+    // Set an interval to change the image every 5 seconds
+    setInterval(function () {
+        image.style.opacity = .3;
+        setTimeout(function () {
+            image.src = imageSources[index];
+            index = (index + 1) % imageSources.length;
+            image.style.opacity = 1;
+        }, 1000);
+    }, 5000);
+
+</script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"
+    integrity="sha512-auFmPm+de880vk/c+bgBmuOnQ7BM28z7zPWmepVgX8737t75OHZjElOnQqERwP8cE4DIyCJ+gb1kE0b/eLWcnA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+<script src="https://www.unpkg.com/shery-js@1.0.0-alpha.0.5/dist/Shery.js"></script>
+<script>
+    Shery.mouseFollower();
+    Shery.makeMagnet('.y, #btn, .image, .bx-home');
+</script> -->
+
+</html>
